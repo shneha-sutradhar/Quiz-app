@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Score History</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Score History</h1>
+    <div id="history"></div>
+    <button onclick="location.href='index.html'">Back to Login</button>
+  </div>
+
+  <script>
+    const historyDiv = document.getElementById("history");
+    const history = JSON.parse(localStorage.getItem("scoreHistory")) || [];
+
+    if (history.length === 0) {
+      historyDiv.innerHTML = "<p>No previous scores found.</p>";
+    } else {
+      const list = document.createElement("ul");
+      history.forEach(entry => {
+        const item = document.createElement("li");
+        item.textContent = `${entry.name} - ${entry.category} - ${entry.score} (${entry.time})`;
+        list.appendChild(item);
+      });
+      historyDiv.appendChild(list);
+    }
+  </script>
+</body>
+</html>

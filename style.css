@@ -1,0 +1,113 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.quiz-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header & Labels */
+h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+label, #timer {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Inputs */
+input[type="text"], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Answers */
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  background: #ecf0f1;
+  color: #333;
+  border: 1px solid #bdc3c7;
+  text-align: left;
+  padding-left: 16px;
+}
+
+#answers button:hover {
+  background: #dfe6e9;
+}
+
+/* Hide Class */
+.hide {
+  display: none;
+}
+
+/* Score List (history.html) */
+ul {
+  list-style: none;
+  margin-top: 15px;
+  text-align: left;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #2d3436;
+}
